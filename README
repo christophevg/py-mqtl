@@ -1,0 +1,8 @@
+MQTL - Model Query and Transformation Language
+by Christophe VG <contact@christophe.vg>
+
+---
+
+MQTL is (will become) a generic solution to query and transform object models
+in Python. MQTL's goal is to be non-intrusive, allowing it to be used on
+arbitrary object models.
