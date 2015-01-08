@@ -1,10 +1,13 @@
 PYTHON=PYTHONPATH=src:. python
+EXAMPLES=$(notdir $(wildcard examples/*.py))
+RUN_EXAMPLES=$(patsubst %,run_%,${EXAMPLES})
 
 all: run
 
-run: run-visitor run-basic_query
+run: ${RUN_EXAMPLES}
+	echo $<
 
-run-%: examples/%.py
+run_%: examples/%
 	@echo "*** executing $<"
 	@${PYTHON} $<
 	@echo
