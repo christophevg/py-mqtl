@@ -2,8 +2,12 @@ PYTHON=PYTHONPATH=src:. python
 
 all: run
 
-run:
-	@${PYTHON} examples/visitor.py
+run: run-visitor run-basic_query
+
+run-%: examples/%.py
+	@echo "*** executing $<"
+	@${PYTHON} $<
+	@echo
 
 clean:
 
